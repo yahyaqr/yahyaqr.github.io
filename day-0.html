@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="assets/css/Agne.css">
     <link rel="stylesheet" href="assets/css/Komika%20Axis.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/custom-css-bootstrap-magic-2020-10-23.css">
     <link rel="stylesheet" href="assets/css/Drag--Drop-Upload-Form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -23,49 +22,6 @@
 </head>
 
 <body style="font-family: Montserrat, sans-serif;">
-    <div class="modal fade" role="dialog" tabindex="-1" id="quiz">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Quiz Mingguan</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div class="modal-body"><form action="https://app.formking.io/submit/7da12e3dfe6b466ea04418a89216e447" method="POST"><div class="rendered-form"><div class="formbuilder-textarea form-group field-textarea-1603442269968"><label for="textarea-1603442269968" class="formbuilder-textarea-label">Siapakah menteri terganteng di Arunika?</label><textarea name="textarea-1603442269968" type="textarea" class="form-control" id="textarea-1603442269968"></textarea></div><div class="formbuilder-textarea form-group field-textarea-1603442493265"><label for="textarea-1603442493265" class="formbuilder-textarea-label">Siapakah menteri tercantik di Arunika?</label><textarea name="textarea-1603442493265" type="textarea" class="form-control" id="textarea-1603442493265"></textarea></div><div class="formbuilder-select form-group field-select-1603442310322"><label for="select-1603442310322" class="formbuilder-select-label">Siapakah presiden Indonesia?</label><select name="select-1603442310322" class="form-control" id="select-1603442310322"><option value="Jokowi" selected="true" id="select-1603442310322-0">Joko Widodo</option><option value="Nada-Zharfania" id="select-1603442310322-1">Nada Zharfania</option><option value="Royyan-Abdullah" id="select-1603442310322-2">Royyan Abdullah</option></select></div></div></form></div>
-                <div class="modal-footer formbuilder-button form-group field-button-1603442573321"><button class="btn btn-secondary" id="button-1603442573321" type="submit" name="button-1603442573321">KIRIM</button></div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="tugas">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <form data-bss-recipient="09ed189435ebda57fb88a063d3b9f71b">
-                    <div class="modal-header" style="margin-bottom: 2rem;">
-                        <h4 class="modal-title">Tugas Mingguan</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                    <div class="modal-body">
-                        <div class="dashed_upload"><div class="wrapper">
-  <div class="drop">
-    <div class="cont">
-      <i class="fa fa-cloud-upload"></i>
-      <div class="tit" style="font-size:1.5rem;">
-        SERET BERKAS
-      </div>
-      <div class="desc">
-        atau 
-      </div>
-      <div class="browse" style="color:black;background-color:#79c3d0;">
-        BUKA FILE BROWSER
-      </div>
-    </div>
-    <output id="list"></output><input id="files" multiple name="files[]" type="file" />
-  </div>
-</div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-    <script src="js/index.js"></script></div>
-                    </div>
-                    <div class="modal-footer" style="margin-top: 1rem;"><button class="btn btn-secondary" type="submit">KIRIM</button></div>
-                </form>
-            </div>
-        </div>
-    </div>
     <div class="sticky-top" style="background: #401f7a;">
         <ul class="nav d-flex justify-content-end container">
             <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-white align-self-end" data-toggle="dropdown" aria-expanded="false" href="#">TENTANG GAP</a>
@@ -200,7 +156,7 @@
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
                                         <div class="col">
-                                            <p>DL: 15 November 2019, Pukul 23.59</p><button class="btn btn-secondary" data-bs-hover-animate="pulse" type="button" style="width: 100%;" data-toggle="modal" data-target="#tugas">KUMPULKAN TUGAS</button></div>
+                                            <p>DL: 15 November 2019, Pukul 23.59</p><a class="btn btn-secondary" role="button" style="width: 100%;" href="https://docs.google.com/forms/d/1bmxry8aGNEMcpDuXvHRs8Afox3aIJ_NlExmlrRe1gmg/edit">KUMPULKAN TUGAS</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -213,7 +169,7 @@
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
                                         <div class="col">
-                                            <p>DL: 16 November 2019, Pukul 20.00</p><button class="btn btn-secondary" data-bs-hover-animate="pulse" type="button" style="width: 100%;" data-toggle="modal" data-target="#quiz">MULAI QUIZ</button></div>
+                                            <p>DL: 16 November 2019, Pukul 20.00</p><a class="btn btn-secondary" role="button" style="width: 100%;" href="https://docs.google.com/forms/d/1bmxry8aGNEMcpDuXvHRs8Afox3aIJ_NlExmlrRe1gmg/edit">MULAI QUIZ</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -230,7 +186,6 @@
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/smart-forms.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
