@@ -90,16 +90,6 @@
   }
 }
 
-h1 {
-  font-family: arial black;
-  font-size: 50px;
-  color: white;
-  margin: 0px;
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-}
-
 .testimonials-clean p {
   color: #7d8285;
 }
@@ -201,5 +191,11 @@ h1 {
   opacity: 1;
   background-image: linear-gradient(#ff9c00 1.1px, transparent 1.1px), linear-gradient(to right, #ff9c00 1.1px, #ffab00 1.1px);
   background-size: 22px 22px;
+}
+
+@media (max-width: 767px) {
+  h1, .h1 {
+    font-size: 2rem;
+  }
 }
 
