@@ -256,6 +256,7 @@ header {
 
 .article ul li.experience {
   margin-top: 20px;
+  cursor: help;
 }
 
 .article h2 {
