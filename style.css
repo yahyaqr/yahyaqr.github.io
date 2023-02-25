@@ -446,7 +446,7 @@ header {
   padding: 0;
 }
 
-#aside .social-item:nth-child(2) {
+#aside .social-item:not(:first-child):not(:last-child) {
   margin: 0 10px 0;
 }
 
