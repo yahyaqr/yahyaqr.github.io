@@ -486,6 +486,12 @@ footer {
     align-items: center;
   }
 
+  #jumbotron #profile-picture,
+  #jumbotron .overlay {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
   main {
     flex-direction: column;
   }
@@ -502,5 +508,17 @@ footer {
   #aside .identity {
     display: flex;
     animation: reveal 0.5s ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #jumbotron .row {
+    gap: 10px;
+  }
+
+  #jumbotron #profile-picture,
+  #jumbotron .overlay {
+    max-width: 350px;
+    margin: 0 auto;
   }
 }
