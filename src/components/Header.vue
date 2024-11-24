@@ -2,10 +2,17 @@
     <header class="bg-[#151515] border-b border-[#555]">
         <div
             class="container mx-auto px-6 py-10 flex flex-col md:flex-row md:justify-between items-center space-y-6 md:space-y-0">
-            <!-- Content Title -->
-            <router-link to="/"
-                class="text-2xl font-bold hover:text-[#ffdb70] transition-colors text-center md:text-left">
-                {{ content.title }}
+            <!-- Rotating Circle Image -->
+            <router-link to="/" class="relative threedrelative block group">
+                <div class="relative w-16 h-16 -my-4">
+                    <!-- Front Face -->
+                    <img src="../assets/header.png" alt="Header Logo"
+                        class="absolute inset-0 w-full h-full rounded-full backface-visible" />
+                    <!-- Back Face -->
+                    <div
+                        class="absolute inset-0 w-full h-full rounded-full bg-gray-400 transform rotateY-180 backface-visible">
+                    </div>
+                </div>
             </router-link>
             <!-- Navigation -->
             <nav id="nav" class="flex justify-center md:justify-start">
@@ -34,15 +41,12 @@
 </template>
 
 <script setup>
-import { Linkedin } from 'lucide-vue-next';
-
 const isExternal = (link) => {
     if (!link) return false; // Handle undefined or null links
     return link.startsWith('http') || link.startsWith('#');
 };
 
 const content = {
-    title: "yahyaqr.github.io",
     nav: {
         items: [
             {
@@ -57,3 +61,48 @@ const content = {
     },
 };
 </script>
+
+<style>
+/* Keyframes for horizontal flipping */
+@keyframes continuous-flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    25% {
+        transform: rotateY(90deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    75% {
+        transform: rotateY(270deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Hover Animation */
+.group:hover .relative {
+    animation: continuous-flip 0.5s infinite linear;
+}
+
+/* 3D effect */
+.threedrelative {
+    position: relative;
+    perspective: 1000px;
+}
+
+.backface-visible {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.rotateY-180 {
+    transform: rotateY(180deg);
+}
+</style>
