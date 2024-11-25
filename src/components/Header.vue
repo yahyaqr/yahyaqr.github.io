@@ -8,10 +8,6 @@
                     <!-- Front Face -->
                     <img src="../assets/header.png" alt="Header Logo"
                         class="absolute inset-0 w-full h-full rounded-full backface-visible" />
-                    <!-- Back Face -->
-                    <div
-                        class="absolute inset-0 w-full h-full rounded-full bg-gray-400 transform rotateY-180 backface-visible">
-                    </div>
                 </div>
             </router-link>
             <!-- Navigation -->
@@ -100,9 +96,5 @@ const content = {
 .backface-visible {
     transform-style: preserve-3d;
     backface-visibility: hidden;
-}
-
-.rotateY-180 {
-    transform: rotateY(180deg);
 }
 </style>

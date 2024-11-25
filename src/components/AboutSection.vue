@@ -25,7 +25,7 @@
                     Beyond work,
                     I love exploring innovative ideas, playing chess, and diving into new challenges.
                 </p>
-                <router-link to="/about" class="text-[#ffdb70] hover:underline font-medium">
+                <router-link to="/profile" class="text-[#ffdb70] hover:underline font-medium">
                     Explore My Profile
                 </router-link>
 
