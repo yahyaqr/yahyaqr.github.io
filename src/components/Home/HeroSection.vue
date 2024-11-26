@@ -28,7 +28,8 @@
                 </div>
             </div>
             <div class="flex justify-center items-center">
-                <img src="https://media.giphy.com/media/QNFhOolVeCzPQ2Mx85/giphy.gif" alt="GIF" class="w-[650px]">
+                <img src="https://media.giphy.com/media/QNFhOolVeCzPQ2Mx85/giphy.gif" alt="GIF"
+                    class="w-[650px] unselectable">
             </div>
         </div>
     </header>
@@ -37,3 +38,14 @@
 <script setup>
 import { Linkedin } from 'lucide-vue-next';
 </script>
+
+<style scoped>
+.unselectable {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+</style>
