@@ -4,10 +4,11 @@
             <!-- Identity Section -->
             <div
                 :class="['flex flex-col justify-center items-center', { 'hidden': !identityVisible, 'flex animate-fade-in': identityVisible }]">
-                <img :src="getImageUrl(content.profile.image)" alt="Identity Picture" class="rounded-full w-24" />
+                <img loading="lazy" :src="getImageUrl(content.profile.image)" alt="Identity Picture"
+                    class="rounded-full w-24" />
                 <div class="text-center mt-5">
-                    <h2 class="text-[#fafafa] mb-2 text-lg font-semibold">{{ content.profile.name }}</h2>
-                    <p class="text-[#d6d6d6] text-sm">{{ content.profile.title }}</p>
+                    <h2 class="text-[#fafafa] text-2xl font-semibold">{{ content.profile.name }}</h2>
+                    <p class="text-[#ffdb70]">{{ content.profile.title }}</p>
                 </div>
             </div>
 
@@ -52,7 +53,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const content = {
     profile: {
-        name: "Yahya Aqrom",
+        name: "Yahya Aqrom S.T.",
         title: "Fullstack Engineer",
         description:
             "As a fullstack developer, I have gained proficiency in React, React Native, Bootstrap, Tailwind, and SASS. I also have hands-on experience with Git, Node.js, Hapi.js, Electron.js, Vue.js, CodeIgniter, and FastAPI.",
@@ -108,6 +109,6 @@ onBeforeUnmount(() => {
     window.removeEventListener("scroll", handleScroll);
 });
 
-const getIconUrl = (iconPath) => new URL(`../assets/${iconPath}`, import.meta.url).href;
-const getImageUrl = (imgPath) => new URL(`../assets/${imgPath}`, import.meta.url).href;
+const getIconUrl = (iconPath) => new URL(`../../assets/${iconPath}`, import.meta.url).href;
+const getImageUrl = (imgPath) => new URL(`../../assets/${imgPath}`, import.meta.url).href;
 </script>

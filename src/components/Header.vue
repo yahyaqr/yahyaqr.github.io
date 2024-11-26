@@ -1,12 +1,12 @@
 <template>
     <header class="bg-[#151515] border-b border-[#555]">
         <div
-            class="container mx-auto px-6 py-10 flex flex-col md:flex-row md:justify-between items-center space-y-6 md:space-y-0">
+            class="container mx-auto px-6 pt-10 pb-4 sm:py-10 flex flex-col md:flex-row md:justify-between items-center space-y-8 md:space-y-0">
             <!-- Rotating Circle Image -->
             <router-link to="/" class="relative threedrelative block group">
                 <div class="relative w-16 h-16 -my-4">
                     <!-- Front Face -->
-                    <img src="../assets/header.png" alt="Header Logo"
+                    <img loading="lazy" src="../assets/header.png" alt="Header Logo"
                         class="absolute inset-0 w-full h-full rounded-full backface-visible" />
                 </div>
             </router-link>
@@ -15,19 +15,35 @@
                 <ul class="flex space-x-4">
                     <li v-for="(item, index) in content.nav.items" :key="item.name" class="relative">
                         <!-- Nav Item -->
-                        <component :is="item.link && isExternal(item.link) ? 'a' : 'router-link'"
-                            :href="item.link && isExternal(item.link) ? item.link : undefined"
-                            :to="item.link && !isExternal(item.link) ? item.link : undefined"
-                            class="flex items-center px-5 py-2 text-[#d6d6d6] hover:bg-[#ffdb70] hover:text-[#151515] focus:text-[#151515] rounded-full cursor-pointer transition-colors">
+                        <router-link v-if="!isExternal(item.link)" :to="item.link"
+                            class="flex items-center px-5 py-2 text-[#d6d6d6] cursor-pointer transition-all relative group"
+                            active-class="active-link">
                             {{ item.name }}
-                        </component>
+                            <!-- Animated Underline -->
+                            <span class="absolute left-0 bottom-0 h-[2px] bg-[#555] transition-all duration-300"
+                                :class="isActiveRoute(item.link) ? 'w-full' : 'w-0 group-hover:w-full group-focus:w-full'">
+                            </span>
+                        </router-link>
+                        <a v-else :href="item.link" target="_blank"
+                            class="flex items-center px-5 py-2 text-[#d6d6d6] cursor-pointer transition-all relative group">
+                            {{ item.name }}
+                            <!-- Animated Underline -->
+                            <span
+                                class="absolute left-0 bottom-0 h-[2px] bg-[#555] transition-all duration-300 group-hover:w-full group-focus:w-full">
+                            </span>
+                        </a>
                     </li>
                     <!-- "Hire Me" Button -->
                     <li>
                         <a href="https://www.linkedin.com/in/yahya-aqrom/" target="_blank"
-                            class="flex justify-center items-center gap-1 px-6 py-2 bg-[#ffdb70] text-[#151515] font-bold rounded-full hover:bg-[#ffcb2f] transition-colors">
-                            <img src="../assets/linkedin.svg" alt="Skill icon" class="w-6 h-auto" />
+                            class="flex justify-center items-center gap-1 px-5 py-2 text-[#d6d6d6] cursor-pointer transition-all relative group">
+                            <img loading="lazy" src="../assets/linkedin.svg" alt="Skill icon"
+                                class="w-6 h-auto filter invert brightness-0" />
                             Hire Me
+                            <!-- Animated Underline -->
+                            <span
+                                class="absolute left-0 bottom-0 w-0 h-[2px] bg-[#ffdb70] transition-all duration-300 group-hover:w-full group-focus:w-full">
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -37,9 +53,17 @@
 </template>
 
 <script setup>
-const isExternal = (link) => {
-    if (!link) return false; // Handle undefined or null links
-    return link.startsWith('http') || link.startsWith('#');
+import { useRoute } from 'vue-router';
+
+// Check if the route is external
+const isExternal = (url) => /^(http|https):/.test(url);
+
+// Current route
+const route = useRoute();
+
+// Method to determine if the link is active
+const isActiveRoute = (link) => {
+    return route.path === link;
 };
 
 const content = {

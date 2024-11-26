@@ -11,9 +11,9 @@
 </template>
 
 <script setup>
-import AboutHeroComponent from '../components/AboutHeroSection.vue';
-import AboutContentComponent from '../components/AboutContentSection.vue';
-import AboutAsideComponent from '../components/AboutAsideSection.vue';
+import AboutHeroComponent from '../components/About/HeroSection.vue';
+import AboutContentComponent from '../components/About/ContentSection.vue';
+import AboutAsideComponent from '../components/About/AsideSection.vue';
 </script>
 
 <style scoped>

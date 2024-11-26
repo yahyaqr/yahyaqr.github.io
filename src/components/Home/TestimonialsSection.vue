@@ -14,7 +14,8 @@
 
                 <!-- Testimonial Content -->
                 <div class="mx-12 bg-white/5 rounded-2xl p-8 border border-[#555] text-center">
-                    <img :src="testimonials[currentTestimonialIndex].image" alt="Client logo" class="mb-6 mx-auto" />
+                    <img loading="lazy" :src="testimonials[currentTestimonialIndex].image" alt="Client logo"
+                        class="mb-6 mx-auto" />
                     <p class="text-gray-400 mb-4">
                         "{{ testimonials[currentTestimonialIndex].text }}"
                     </p>

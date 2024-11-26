@@ -6,8 +6,11 @@
                     👋 Hola,
                 </div>
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                    It's <span class="hover:text-[#ffdb70] transition-colors cursor-pointer">Yahya Aqrom</span>, a
-                    Developer that owns a Digital Agency.
+                    It's
+                    <a href="#about" class="hover:text-[#ffdb70] transition-colors cursor-pointer">Yahya Aqrom</a>,
+                    a Developer that owns a
+                    <a href="https://www.vismayastudio.id" target="_blank"
+                        class="hover:text-[#ffdb70] transition-colors cursor-pointer">Digital Agency</a>.
                 </h1>
                 <div class="flex gap-4 mt-8">
                     <!-- View My Work Button using Vue Router -->
@@ -18,7 +21,7 @@
                     <!-- Contact Me Button with LinkedIn -->
                     <a href="https://www.linkedin.com/in/yahya-aqrom/" target="_blank"
                         class="flex justify-center items-center gap-1 border border-[#555] px-6 py-2 rounded-full font-medium hover:bg-white/5">
-                        <img src="../assets/linkedin.svg" alt="Skill icon"
+                        <img src="../../assets/linkedin.svg" alt="Skill icon"
                             class="w-6 h-auto filter invert brightness-0" />
                         Hire Me
                     </a>

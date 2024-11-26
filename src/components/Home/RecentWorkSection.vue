@@ -21,7 +21,7 @@
                             <a href="#" class="text-[#ffdb70] hover:underline">View Case Study</a>
                         </div>
                         <div class="flex justify-center">
-                            <img src="https://placeholder.pics/svg/500x250" alt="Project screenshot"
+                            <img loading="lazy" src="https://placeholder.pics/svg/500x250" alt="Project screenshot"
                                 class="rounded-xl" />
                         </div>
                     </div>
