@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 class="text-2xl font-semibold mb-4">{{ title }}</h2>
+        <h2 class="text-xl font-semibold mb-4">Overview</h2>
         <p class="text-gray-300 mb-4" v-for="(paragraph, index) in content" :key="index">
             {{ paragraph }}
         </p>
@@ -9,5 +9,5 @@
 
 <script setup>
 // Props
-defineProps(['title', 'content']);
+defineProps(['content']);
 </script>

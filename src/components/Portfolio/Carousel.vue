@@ -1,7 +1,7 @@
 <template>
-    <div class="relative h-64 overflow-hidden mb-4">
+    <div class="relative h-64 overflow-hidden mb-4 unselectable">
         <!-- Swiper Carousel -->
-        <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :pagination="{ clickable: true, }" :navigation="true"
+        <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :pagination="{ clickable: true }" :navigation="true"
             :modules="modules" class="mySwiper">
             <swiper-slide v-for="(image, index) in images" :key="index">
                 <img loading="lazy" :src="image" :alt="'Carousel Image ' + (index + 1)"
@@ -45,7 +45,7 @@ const showModal = ref(false);
 const currentImage = ref(null);
 
 // Swiper modules
-const modules = [Navigation];
+const modules = [Pagination, Navigation];
 
 // Handlers
 const openImageModal = (image) => {
@@ -64,6 +64,15 @@ const closeModal = () => {
 .mySwiper {
     width: 100%;
     height: 100%;
+}
+
+.unselectable {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 /* Modal fade-in animation */

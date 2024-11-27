@@ -96,7 +96,7 @@ const projects = ref([
         title: 'GSheets-as-DB',
         description: '',
         image: 'https://placeholder.pics/svg/500x250/DEDEDE/555555-DEDEDE/TaskMaster%20Pro',
-        url: '/portfolio/gsheets-as-db',
+        url: '/portfolio/gsheets-db',
         category: 'Database',
         technologies: ['Vue.js', 'Firebase'],
     },

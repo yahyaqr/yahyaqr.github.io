@@ -9,10 +9,11 @@
             <span>{{ headings.title }}</span>
         </div>
 
+        <!-- Header -->
         <header class="mb-8">
             <div class="flex items-center gap-2">
                 <h1 class="text-3xl font-bold">{{ headings.title }}</h1>
-                <button @click="openModal" class="text-gray-400 hover:text-white focus:outline-none mt-1"
+                <button @click="openModal(about)" class="text-gray-400 hover:text-white focus:outline-none mt-1"
                     aria-label="More information">
                     <InfoIcon class="w-6 h-6" />
                 </button>
@@ -20,15 +21,29 @@
             <p class="text-xl text-gray-400 mt-2">{{ headings.subtitle }}</p>
         </header>
 
+        <!-- Main Content -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- About Section -->
-            <Content :aboutTitle="headings.aboutTitle" :aboutContent="content.about" />
+            <div class="flex flex-col gap-4">
+                <!-- Problem Section -->
+                <Problem :title="headings.title" :content="problemContent" />
 
-            <!-- Tabbed Content -->
-            <TabbedContent :desktopTitle="content.desktopTitle" :desktopDescription="content.desktopDescription"
-                :mobileTitle="content.mobileTitle" :mobileDescription="content.mobileDescription"
-                :desktopImages="desktopImages" :mobileImages="mobileImages" @downloadDesktop="downloadDesktop"
-                @downloadMobile="downloadMobile" />
+                <!-- Overview Section -->
+                <Overview :content="overviewContent" />
+
+                <!-- Key Features Section -->
+                <KeyFeatures :content="keyFeaturesContent" />
+
+                <!-- Target Audience Section -->
+                <TargetUsers :content="targetUsersContent" />
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <!-- PlatformTabs Section -->
+                <PlatformTabs :platforms="platforms" />
+
+                <!-- Tech Stack Section -->
+                <TechStack :content="techStackContent" />
+            </div>
         </div>
 
         <!-- Modal -->
@@ -36,12 +51,8 @@
             <div v-if="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
                 @click.self="closeModal">
                 <div class="bg-[#111111] border border-gray-600 rounded-2xl p-4 sm:p-6 max-w-md w-full">
-                    <h2 class="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
-                        {{ modal.title }}
-                    </h2>
-                    <p class="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">
-                        {{ modal.content }}
-                    </p>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">{{ modal.title }}</h2>
+                    <p class="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4">{{ modal.content }}</p>
                 </div>
             </div>
         </transition>
@@ -49,8 +60,12 @@
 </template>
 
 <script setup>
-import Content from '../../components/Portfolio/Content.vue';
-import TabbedContent from '../../components/Portfolio/TabbedContent.vue';
+import Overview from '../../components/Portfolio/Overview.vue';
+import KeyFeatures from '../../components/Portfolio/KeyFeatures.vue';
+import TechStack from '../../components/Portfolio/TechStack.vue';
+import TargetUsers from '../../components/Portfolio/TargetUsers.vue';
+import Problem from '../../components/Portfolio/Problem.vue';
+import PlatformTabs from '../../components/Portfolio/PlatformTabs.vue';
 import { ref } from 'vue';
 import { InfoIcon } from 'lucide-vue-next';
 
@@ -63,44 +78,10 @@ const modal = ref({
     content: '',
 });
 
-// Headings and content for the page
-const headings = {
-    title: 'Sleep Research Tool',
-    subtitle: 'Advanced sleep analysis for researchers and professionals',
-    aboutTitle: 'About the Tool',
-};
-
-const content = {
-    about: [
-        'The Sleep Research Tool is a comprehensive platform designed for sleep scientists, researchers, and healthcare professionals.',
-        'It provides advanced analytics, data collection, and visualization capabilities to support sleep studies and improve our understanding of sleep patterns and disorders.',
-        'With features like real-time monitoring, customizable dashboards, and collaborative tools, the Sleep Research Tool empowers you to uncover new insights and advance the field of sleep science.',
-    ],
-    desktopTitle: 'Desktop Application',
-    desktopDescription:
-        'Our powerful desktop application provides comprehensive analysis tools and visualization capabilities for in-depth sleep research.',
-    mobileTitle: 'Mobile Application',
-    mobileDescription:
-        'Our mobile app allows for on-the-go data collection and real-time monitoring of sleep patterns.',
-};
-
-// Image data
-const desktopImages = [
-    new URL('../../assets/1.jpg', import.meta.url).href,
-    new URL('../../assets/2.jpg', import.meta.url).href,
-    new URL('../../assets/3.jpg', import.meta.url).href,
-];
-const mobileImages = [
-    new URL('../../assets/1.jpg', import.meta.url).href,
-    new URL('../../assets/2.jpg', import.meta.url).href,
-    new URL('../../assets/3.jpg', import.meta.url).href,
-];
-
 // Methods to handle modal
-const openModal = () => {
-    modal.value.title = 'About Sleep Research Tool';
-    modal.value.content =
-        'The Sleep Research Tool is a state-of-the-art platform designed to revolutionize sleep studies.';
+const openModal = (modalData) => {
+    modal.value.title = modalData.title;
+    modal.value.content = modalData.content;
     showModal.value = true;
 };
 
@@ -108,14 +89,82 @@ const closeModal = () => {
     showModal.value = false;
 };
 
-// Methods for downloading
-const downloadDesktop = () => {
-    console.log('Downloading Desktop App');
+// Headings and content for the page
+const headings = {
+    title: 'LinkedIn Journal',
+    subtitle: 'Streamline your LinkedIn content creation for impactful personal branding',
 };
 
-const downloadMobile = () => {
-    console.log('Downloading Mobile App');
+const about = {
+    title: 'About LinkedIn Journal',
+    content:
+        'LinkedIn Journal is a powerful desktop application designed to streamline the creation of high-quality LinkedIn content. Tailored for professionals, it helps users maintain a consistent posting schedule, ensuring their personal branding efforts align with a professional standard.',
 };
+
+const overviewContent = [
+    'LinkedIn Journal is a powerful desktop application designed to streamline the creation of high-quality LinkedIn content.',
+    'Tailored for professionals, it helps users maintain a consistent posting schedule, ensuring their personal branding efforts align with a professional standard.',
+];
+
+const keyFeaturesContent = [
+    'Automated Content Generation: Effortlessly produce LinkedIn posts by submitting ideas or stories.',
+    'Customizable Tone: Select the desired tone and style of the content to match your personal or professional brand.',
+    'Content Organization: Manage, edit, and organize all generated content within the app for easy scheduling and posting.',
+];
+
+const techStackContent = [
+    {
+        label: 'Frontend and Backend',
+        content: [
+            'Electron (v33.0.1): Ensures the app runs seamlessly as a desktop application across platforms.',
+            'Electron Packager: Used for building and packaging the application for deployment on Windows.',
+        ],
+    },
+    {
+        label: 'AI Integration',
+        content: [
+            'OpenAI SDK (v4.68.1): Powers the app’s content generation capabilities, allowing for intelligent and context-aware post creation.',
+        ],
+    },
+];
+
+const targetUsersContent = [
+    {
+        avatar: '',
+        type: 'Professionals',
+        description: 'Professionals looking to enhance their personal branding on LinkedIn.',
+        isValidImage: false,
+    },
+    {
+        avatar: '',
+        type: 'Individuals',
+        description: 'Individuals seeking a time-saving tool for crafting professional-level LinkedIn posts.',
+        isValidImage: false,
+    },
+];
+
+const problemContent = {
+    asIs: [
+        'Creating LinkedIn content can be time-intensive, especially for busy professionals.',
+    ],
+    possible: [
+        'LinkedIn Journal simplifies this process by turning ideas or raw material into polished, professional posts, ensuring personal branding remains impactful without consuming valuable time.',
+    ],
+};
+
+const platforms = {
+    desktop: {
+        images: [
+            new URL('../../assets/1.jpg', import.meta.url).href,
+            new URL('../../assets/2.jpg', import.meta.url).href,
+            new URL('../../assets/3.jpg', import.meta.url).href,
+        ],
+        downloadHandler: () => {
+            console.log('Downloading Desktop App');
+        },
+    }
+};
+
 </script>
 
 <style scoped>
