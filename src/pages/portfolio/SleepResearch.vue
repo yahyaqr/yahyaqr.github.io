@@ -1,18 +1,11 @@
 <template>
     <div class="container mx-auto px-6 py-16 text-white">
-        <!-- Breadcrumbs -->
-        <div class="flex items-center gap-2 text-gray-400 sm:my-8 my-4">
-            <router-link to="/portfolio" class="hover:text-white hover:underline focus:outline-none">
-                My Work
-            </router-link>
-            <span>></span>
-            <span>{{ headings.title }}</span>
-        </div>
+
 
         <!-- Header -->
         <header class="mb-8">
             <div class="flex items-center gap-2">
-                <h1 class="text-3xl font-bold">{{ headings.title }}</h1>
+                <h1 class="text-2xl sm:text-4xl font-bold">{{ headings.title }}</h1>
                 <button @click="openModal(about)" class="text-gray-400 hover:text-white focus:outline-none mt-1"
                     aria-label="More information">
                     <InfoIcon class="w-6 h-6" />

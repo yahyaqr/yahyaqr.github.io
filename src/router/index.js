@@ -15,18 +15,25 @@ const routes = [
   { path: '/', component: Home }, // Default route
   { path: '/profile', component: Profile },
   { path: '/portfolio', component: Portfolio },
-  { path: '/portfolio/sleep-research-tool', component: SleepResearch },
-  { path: '/portfolio/fastcontent', component: FastContent },
+  { path: '/portfolio/sleep-research', component: SleepResearch },
+  { path: '/portfolio/fast-content', component: FastContent },
   { path: '/portfolio/gsheets-db', component: GSheetsDB },
   { path: '/portfolio/instant-backend', component: InstantBackend },
   { path: '/portfolio/linkedin-journal', component: LinkedinJournal },
-  { path: '/portfolio/startups-due-diligence', component: StartupsDue },
+  { path: '/portfolio/startups-diligence', component: StartupsDue },
   { path: '/portfolio/web-scraper', component: WebScraper },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+        return savedPosition;
+    } else {
+        return { top: 0 };
+    }
+},
 });
 
 export default router;

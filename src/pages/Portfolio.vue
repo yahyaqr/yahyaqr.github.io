@@ -25,7 +25,7 @@
                 <router-link v-for="project in filteredProjects" :key="project.id" :to="project.url"
                     class="bg-white/5 rounded-2xl p-8 border border-[#555] hover:border-[#ffdb70] transition-all duration-300 transform hover:-translate-y-2 block group">
                     <img loading="lazy" :src="project.image" :alt="project.title"
-                        class="w-full h-48 object-cover rounded-xl mb-6" />
+                        class="w-full h-48 object-cover rounded-xl mb-6 filter transition duration-300 group-hover:filter-none saturate-0" />
                     <h3 class="text-2xl font-bold mb-4 group-hover:text-[#ffdb70]">{{ project.title }}</h3>
                     <p class="text-gray-400 mb-6 line-clamp-3">
                         {{ project.description }}
@@ -39,7 +39,7 @@
                 </router-link>
             </div>
 
-            <div class="mt-12 flex justify-center">
+            <div v-if="shouldShowLoadMore" class="mt-12 flex justify-center">
                 <button @click="loadMore"
                     class="px-6 py-3 bg-[#ffdb70] text-gray-900 rounded-full font-bold transition-colors"
                     :class="noMoreProjects ? 'cursor-not-allowed bg-gray-400 opacity-50' : 'hover:bg-[#ffd24d]'"
@@ -58,35 +58,35 @@ const projects = ref([
     {
         id: 1,
         title: 'Sleep Research Tool',
-        description: '',
-        image: 'https://placeholder.pics/svg/500x250/DEDEDE/555555-DEDEDE/Sheepify%20States',
-        url: '/portfolio/sleep-research-tool',
+        description: 'A desktop and mobile app that aids researchers in analyzing psychomotor vigilance tasks for sleep-deprived individuals.',
+        image: new URL('../../src/assets/portfolio/sleep-research.webp', import.meta.url).href,
+        url: '/portfolio/sleep-research',
         category: 'Design',
         technologies: ['Figma', 'Illustrator'],
     },
     {
         id: 2,
         title: 'Startups Due Diligence',
-        description: '',
-        image: 'https://placeholder.pics/svg/500x250/DEDEDE/555555-DEDEDE/TaskMaster%20Pro',
-        url: '/portfolio/startups-due-diligence',
+        description: 'A web application that automates financial and operational evaluation for startups, leveraging web scraping, pitch deck analysis, and machine learning.',
+        image: new URL('../../src/assets/portfolio/startups-diligence.webp', import.meta.url).href,
+        url: '/portfolio/startups-diligence',
         category: 'Development',
         technologies: ['Vue.js', 'Firebase'],
     },
     {
         id: 3,
         title: 'FastContent',
-        description: '',
-        image: 'https://placeholder.pics/svg/500x250/DEDEDE/555555-DEDEDE/EcoTrack',
-        url: '/portfolio/fastcontent',
+        description: 'A desktop application that uses AI to generate scripts and conversation audio in formats such as discussions, interviews, and storytelling, with voice cloning support.',
+        image: new URL('../../src/assets/portfolio/fast-content.webp', import.meta.url).href,
+        url: '/portfolio/fast-content',
         category: 'Mobile',
         technologies: ['React Native', 'Node.js'],
     },
     {
         id: 4,
         title: 'LinkedIn Journal',
-        description: '',
-        image: 'https://placeholder.pics/svg/500x250/DEDEDE/555555-DEDEDE/Sheepify%20States',
+        description: 'A desktop app that automates LinkedIn content creation with AI-generated posts, customizable tone, and a content management dashboard for scheduling posts.',
+        image: new URL('../../src/assets/portfolio/linkedin-journal.webp', import.meta.url).href,
         url: '/portfolio/linkedin-journal',
         category: 'Design',
         technologies: ['Figma', 'Illustrator'],
@@ -94,8 +94,8 @@ const projects = ref([
     {
         id: 5,
         title: 'GSheets-as-DB',
-        description: '',
-        image: 'https://placeholder.pics/svg/500x250/DEDEDE/555555-DEDEDE/TaskMaster%20Pro',
+        description: 'A SaaS platform that transforms Google Sheets into a dynamic backend database with an automated CRUD dashboard for developers and freelancers.',
+        image: new URL('../../src/assets/portfolio/gsheets-db.webp', import.meta.url).href,
         url: '/portfolio/gsheets-db',
         category: 'Database',
         technologies: ['Vue.js', 'Firebase'],
@@ -103,8 +103,8 @@ const projects = ref([
     {
         id: 6,
         title: 'Instant Backend',
-        description: '',
-        image: 'https://placeholder.pics/svg/500x250/DEDEDE/555555-DEDEDE/EcoTrack',
+        description: 'A SaaS platform for developers to rapidly create CRUD APIs and dashboards using AI-powered endpoint generation, reducing repetitive tasks.',
+        image: new URL('../../src/assets/portfolio/instant-backend.webp', import.meta.url).href,
         url: '/portfolio/instant-backend',
         category: 'Mobile',
         technologies: ['React Native', 'Node.js'],
@@ -112,8 +112,8 @@ const projects = ref([
     {
         id: 7,
         title: 'Web Scraper',
-        description: '',
-        image: 'https://placeholder.pics/svg/500x250/DEDEDE/555555-DEDEDE/EcoTrack',
+        description: 'A desktop application designed for non-technical users to extract web data and export it as Excel files, automating data collection tasks.',
+        image: new URL('../../src/assets/portfolio/web-scraper.webp', import.meta.url).href,
         url: '/portfolio/web-scraper',
         category: 'Mobile',
         technologies: ['React Native', 'Node.js'],
@@ -122,11 +122,11 @@ const projects = ref([
 
 const categories = ['All', 'Design', 'Development', 'Mobile', 'Database'];
 const currentCategory = ref('All');
-const visibleProjects = ref(3);
+const visibleProjects = ref(9);
 
 const filterCategory = (category) => {
     currentCategory.value = category;
-    visibleProjects.value = 3;
+    visibleProjects.value = 9;
 };
 
 const filteredProjects = computed(() => {
@@ -147,18 +147,27 @@ const noMoreProjects = computed(() => {
 });
 
 const loadMore = () => {
-    visibleProjects.value += 3;
+    visibleProjects.value += 9;
 };
+
+const shouldShowLoadMore = computed(() => projects.value.length > 9);
 </script>
 
 <style scoped>
 .line-clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    /* Number of lines to show */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
+}
+
+.filter {
+    filter: saturate(0%);
+}
+
+.filter-none {
+    filter: saturate(100%);
 }
 </style>

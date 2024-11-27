@@ -1,18 +1,11 @@
 <template>
     <div class="container mx-auto px-6 py-16 text-white">
-        <!-- Breadcrumbs -->
-        <div class="flex items-center gap-2 text-gray-400 sm:my-8 my-4">
-            <router-link to="/portfolio" class="hover:text-white hover:underline focus:outline-none">
-                My Work
-            </router-link>
-            <span>></span>
-            <span>{{ headings.title }}</span>
-        </div>
+
 
         <!-- Header -->
         <header class="mb-8">
             <div class="flex items-center gap-2">
-                <h1 class="text-3xl font-bold">{{ headings.title }}</h1>
+                <h1 class="text-2xl sm:text-4xl font-bold">{{ headings.title }}</h1>
                 <button @click="openModal(about)" class="text-gray-400 hover:text-white focus:outline-none mt-1"
                     aria-label="More information">
                     <InfoIcon class="w-6 h-6" />
@@ -91,47 +84,55 @@ const closeModal = () => {
 
 // Headings and content for the page
 const headings = {
-    title: 'FastContent',
-    subtitle: 'AI-powered content creation tool for effortless storytelling',
+    title: 'Web Scraper',
+    subtitle: 'Effortless data extraction from websites to Excel files.',
 };
 
 const about = {
-    title: 'About FastContent',
+    title: 'About Web Scraper',
     content:
-        'FastContent is a cutting-edge desktop application that uses AI to simplify and accelerate content creation. It offers users the ability to generate content in various formats such as Discussions, Interviews, Monologues, and Storytelling. Helping both individuals and businesses save time and effort in crafting high-quality content.',
+        'Web Scraper is a free and user-friendly desktop application designed to help non-technical users extract data from websites and save it into an Excel file (.xlsx) effortlessly. The app simplifies web scraping for personal, professional, or business needs, eliminating the need for manual data collection.',
 };
 
 const overviewContent = [
-    'FastContent is a cutting-edge desktop application that uses AI to simplify and accelerate content creation.',
-    'It offers users the ability to generate content in various formats such as Discussions, Interviews, Monologues, and Storytelling.',
-    'Helping both individuals and businesses save time and effort in crafting high-quality content.',
+    'Web Scraper is a free and user-friendly desktop application for data extraction.',
+    'Designed for non-technical users to collect and save website data into Excel files (.xlsx).',
+    'Simplifies the process of web scraping for personal, professional, and business purposes.',
 ];
 
 const keyFeaturesContent = [
-    'Diverse Content Formats: Create content in formats like Discussions, Interviews, Monologues, and Storytelling instantly.',
-    'AI-Powered Script Creation: Accepts raw text materials and transforms them into complete scripts with ease.',
-    'Voice Cloning: Allows users to integrate their own voice for a personalized and realistic content experience.',
+    'Easy-to-Use Interface: A simple, intuitive design tailored for non-technical users.',
+    'Flexible Data Extraction: Supports extracting data from various websites, including tables, lists, and structured content.',
+    'Excel Export: Automatically saves the extracted data into an organized .xlsx file.',
+    'Free and Accessible: No cost to use, making data collection accessible for everyone.',
 ];
 
 const techStackContent = [
     {
-        label: 'Frontend',
-        content: [
-            'Built using Vue.js 3.5.12 for a modern and dynamic user interface.',
-            'TailwindCSS 3.4.14 for a responsive and customizable design.',
-        ],
-    },
-    {
         label: 'Backend',
         content: [
-            'Powered by Vite 5.4.9 for a fast and optimized development environment.',
+            'Puppeteer: Automates browser interactions and extracts complex web data.',
+            'Cheerio: Parses and manipulates HTML for targeted data extraction.',
+            'Axios: Handles HTTP requests to fetch web content.',
         ],
     },
     {
-        label: 'Others',
+        label: 'Data Processing',
         content: [
-            'Audio Processing: Libraries like audio-buffer, audiobuffer-to-wav, and wav-encoder ensure high-quality audio management and processing for voice cloning and script playback.',
-            'Additional Tools: Lucide Vue Next for scalable icons, PostCSS, and Autoprefixer for efficient CSS management and cross-browser compatibility.',
+            'XLSX: Converts extracted data into Excel files.',
+        ],
+    },
+    {
+        label: 'Utilities',
+        content: [
+            'Multer: Manages file uploads.',
+            'Inquirer: Simplifies user prompts for setting up scraping parameters.',
+        ],
+    },
+    {
+        label: 'Future Frontend',
+        content: [
+            'Electron.js: Planned framework to turn the app into a cross-platform desktop application.',
         ],
     },
 ];
@@ -139,27 +140,33 @@ const techStackContent = [
 const targetUsersContent = [
     {
         avatar: '',
-        type: 'Businesses & Individuals',
-        description: 'Individuals or businesses looking to speed up and simplify the content creation process.',
+        type: 'Non-technical Users',
+        description: 'Individuals with limited technical expertise needing web data for personal, professional, or business purposes.',
         isValidImage: false,
     },
     {
         avatar: '',
-        type: 'Professionals',
-        description:
-            'Professionals who find traditional content creation methods time-consuming, including scriptwriting, recording, and editing.',
+        type: 'Small Businesses',
+        description: 'Entrepreneurs gathering market data for insights.',
+        isValidImage: false,
+    },
+    {
+        avatar: '',
+        type: 'Students and Researchers',
+        description: 'Simplifies data collection for academic projects and research.',
         isValidImage: false,
     },
 ];
 
 const problemContent = {
     asIs: [
-        'Traditional content creation involves lengthy processes such as preparing materials, writing scripts, recording, and editing.',
+        'Manual data collection from websites is time-consuming and inefficient.',
     ],
     possible: [
-        'FastContent eliminates these inefficiencies, enabling faster, more accessible content generation with AI-driven features.',
+        'Web Scraper automates the process, allowing users to quickly gather, structure, and save web data without needing technical skills.',
     ],
 };
+
 
 const platforms = {
     desktop: {
