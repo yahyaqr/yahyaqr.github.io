@@ -1,27 +1,28 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../pages/Home.vue';
-import Profile from '../pages/Profile.vue';
-import Portfolio from '../pages/Portfolio.vue';
 
-import SleepResearch from '../pages/portfolio/SleepResearch.vue';
-import FastContent from '../pages/portfolio/FastContent.vue';
-import GSheetsDB from '../pages/portfolio/GSheetsDB.vue';
-import InstantBackend from '../pages/portfolio/InstantBackend.vue';
-import LinkedinJournal from '../pages/portfolio/LinkedinJournal.vue';
-import StartupsDue from '../pages/portfolio/StartupsDue.vue';
-import WebScraper from '../pages/portfolio/WebScraper.vue';
+const Home = () => import('../pages/Home.vue');
+const Profile = () => import('../pages/Profile.vue');
+const Portfolio = () => import('../pages/Portfolio.vue');
+const SleepResearch = () => import('../pages/portfolio/SleepResearch.vue');
+const FastContent = () => import('../pages/portfolio/FastContent.vue');
+const GSheetsDB = () => import('../pages/portfolio/GSheetsDB.vue');
+const InstantBackend = () => import('../pages/portfolio/InstantBackend.vue');
+const LinkedinJournal = () => import('../pages/portfolio/LinkedinJournal.vue');
+const StartupsDue = () => import('../pages/portfolio/StartupsDue.vue');
+const WebScraper = () => import('../pages/portfolio/WebScraper.vue');
 
 const routes = [
-  { path: '/', component: Home }, // Default route
-  { path: '/profile', component: Profile },
-  { path: '/portfolio', component: Portfolio },
-  { path: '/portfolio/sleep-research', component: SleepResearch },
-  { path: '/portfolio/fast-content', component: FastContent },
-  { path: '/portfolio/gsheets-db', component: GSheetsDB },
-  { path: '/portfolio/instant-backend', component: InstantBackend },
-  { path: '/portfolio/linkedin-journal', component: LinkedinJournal },
-  { path: '/portfolio/startups-diligence', component: StartupsDue },
-  { path: '/portfolio/web-scraper', component: WebScraper },
+  { path: '/', name: 'Home', component: Home },
+  { path: '/profile', name: 'Profile', component: Profile },
+  { path: '/portfolio', name: 'Portfolio', component: Portfolio },
+  { path: '/portfolio/sleep-research', name: 'SleepResearch', component: SleepResearch },
+  { path: '/portfolio/fast-content', name: 'FastContent', component: FastContent },
+  { path: '/portfolio/gsheets-db', name: 'GSheetsDB', component: GSheetsDB },
+  { path: '/portfolio/instant-backend', name: 'InstantBackend', component: InstantBackend },
+  { path: '/portfolio/linkedin-journal', name: 'LinkedinJournal', component: LinkedinJournal },
+  { path: '/portfolio/startups-diligence', name: 'StartupsDue', component: StartupsDue },
+  { path: '/portfolio/web-scraper', name: 'WebScraper', component: WebScraper },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: Home },
 ];
 
 const router = createRouter({
@@ -29,11 +30,11 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-        return savedPosition;
+      return savedPosition;
     } else {
-        return { top: 0 };
+      return { top: 0 };
     }
-},
+  },
 });
 
 export default router;
