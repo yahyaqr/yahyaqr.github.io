@@ -101,9 +101,9 @@ const overviewContent = [
 ];
 
 const keyFeaturesContent = [
-    'AI-Powered API Creation: Instantly generate REST APIs and GraphQL endpoints by simply describing the desired functionality.',
-    'Dashboard Generation: Automatically create admin dashboards alongside the APIs.',
-    'Customizable Output: Developers retain control over the output, allowing fine-tuning of the generated APIs and dashboards.',
+    'Instantly generate REST APIs and GraphQL endpoints by simply describing the desired functionality.',
+    'Automatically create admin dashboards alongside the APIs.',
+    'Developers retain control over the output, allowing fine-tuning of the generated APIs and dashboards.',
 ];
 
 const techStackContent = [
@@ -113,12 +113,6 @@ const techStackContent = [
             'FastAPI: A high-performance Python web framework for building APIs.',
             'Uvicorn: An ASGI server for running FastAPI applications in development.',
             'Gunicorn: A production-grade server for running the app in live environments.',
-        ],
-    },
-    {
-        label: 'Testing',
-        content: [
-            'Pytest: Ensures robust testing of the generated APIs.',
         ],
     },
     {
@@ -154,15 +148,10 @@ const problemContent = {
 };
 
 const platforms = {
-    desktop: {
+    web: {
         images: [
-            new URL('../../assets/1.jpg', import.meta.url).href,
-            new URL('../../assets/2.jpg', import.meta.url).href,
-            new URL('../../assets/3.jpg', import.meta.url).href,
+            new URL('../../assets/instant-backend.webp', import.meta.url).href,
         ],
-        downloadHandler: () => {
-            console.log('Downloading Desktop App');
-        },
     }
 };
 

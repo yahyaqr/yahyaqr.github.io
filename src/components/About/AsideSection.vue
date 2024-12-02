@@ -57,7 +57,7 @@ const content = {
         title: "Fullstack Engineer",
         description:
             "As a fullstack developer, I have gained proficiency in React, React Native, Bootstrap, Tailwind, and SASS. I also have hands-on experience with Git, Node.js, Hapi.js, Electron.js, Vue.js, CodeIgniter, and FastAPI.",
-        image: "1.jpg",
+        image: "1.webp",
     },
     contact: {
         email: "aqrom.yahya75@gmail.com",

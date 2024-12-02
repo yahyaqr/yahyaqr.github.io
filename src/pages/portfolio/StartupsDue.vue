@@ -91,11 +91,11 @@ const headings = {
 const about = {
     title: 'About Startups Due Diligence Automation',
     content:
-        'Startups Due Diligence Automation is a SaaS web application that streamlines the due diligence process for venture capitalists. By combining web scraping, pitch deck analysis, and machine learning, the platform automates data collection and evaluation, enabling VCs to assess startup funding readiness efficiently.',
+        'Startups Due Diligence Automation is an internal web application that streamlines the due diligence process for venture capitalists. By combining web scraping, pitch deck analysis, and machine learning, the platform automates data collection and evaluation, enabling VCs to assess startup funding readiness efficiently.',
 };
 
 const overviewContent = [
-    'Startups Due Diligence Automation is a SaaS web application that streamlines the due diligence process for venture capitalists.',
+    'Startups Due Diligence Automation is an internal web application that streamlines the due diligence process for venture capitalists.',
     'The platform combines web scraping, pitch deck analysis, and machine learning to automate data collection and evaluation.',
     'It enables VCs to assess startup funding readiness efficiently, reducing manual effort.',
 ];
@@ -110,37 +110,23 @@ const techStackContent = [
     {
         label: 'Frontend',
         content: [
-            'Framework: Next.js for building a scalable, SEO-friendly web application.',
-            'Styling: TailwindCSS for creating a modern, responsive UI.',
+            'Next.js for building a scalable, SEO-friendly web application.',
+            'TailwindCSS for creating a modern, responsive UI.',
         ],
     },
     {
         label: 'Backend',
         content: [
-            'Web Scraping and Data Extraction:',
-            'Axios: For making HTTP requests to gather web content.',
-            'Cheerio: For parsing and extracting specific HTML data.',
-            'PDF-Parse: For extracting structured information from uploaded pitch decks.',
+            'Axios for making HTTP requests to gather web content.',
+            'Cheerio for parsing and extracting specific HTML data.',
+            'PDF-Parse for extracting structured information from uploaded pitch decks.',
         ],
     },
     {
         label: 'AI Integration',
         content: [
-            'OpenAI API: Powers the machine learning model for funding success predictions.',
-            'Server: Built on Express.js for robust API endpoints.',
-        ],
-    },
-    {
-        label: 'File Management',
-        content: [
-            'Multer: Handles file uploads securely.',
-        ],
-    },
-    {
-        label: 'DevOps and Development Tools',
-        content: [
-            'Concurrency Management: concurrently for running multiple processes in development.',
-            'PostCSS and Autoprefixer: Optimize CSS for cross-browser compatibility.',
+            'OpenAI API for JSON data formatting and analysis.',
+            'Built on Express.js for robust API endpoints.',
         ],
     },
 ];
@@ -170,15 +156,18 @@ const problemContent = {
 };
 
 const platforms = {
-    desktop: {
+    web: {
         images: [
-            new URL('../../assets/1.jpg', import.meta.url).href,
-            new URL('../../assets/2.jpg', import.meta.url).href,
-            new URL('../../assets/3.jpg', import.meta.url).href,
+            new URL('../../assets/startups-diligence/w1.png', import.meta.url).href,
+            new URL('../../assets/startups-diligence/w1.webp', import.meta.url).href,
+            new URL('../../assets/startups-diligence/w2.webp', import.meta.url).href,
+            new URL('../../assets/startups-diligence/w3.webp', import.meta.url).href,
+            new URL('../../assets/startups-diligence/w4.webp', import.meta.url).href,
+            new URL('../../assets/startups-diligence/w5.webp', import.meta.url).href,
+            new URL('../../assets/startups-diligence/w6.webp', import.meta.url).href,
+            new URL('../../assets/startups-diligence/w7.webp', import.meta.url).href,
+            new URL('../../assets/startups-diligence/w8.webp', import.meta.url).href,
         ],
-        downloadHandler: () => {
-            console.log('Downloading Desktop App');
-        },
     }
 };
 

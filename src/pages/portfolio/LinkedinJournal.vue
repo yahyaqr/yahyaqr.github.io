@@ -100,23 +100,22 @@ const overviewContent = [
 ];
 
 const keyFeaturesContent = [
-    'Automated Content Generation: Effortlessly produce LinkedIn posts by submitting ideas or stories.',
-    'Customizable Tone: Select the desired tone and style of the content to match your personal or professional brand.',
-    'Content Organization: Manage, edit, and organize all generated content within the app for easy scheduling and posting.',
+    'Effortlessly produce LinkedIn posts by submitting ideas or stories.',
+    'Select the desired tone and style of the content to match your personal or professional brand.',
+    'Manage, edit, and organize all generated content within the app for easy scheduling and posting.',
 ];
 
 const techStackContent = [
     {
-        label: 'Frontend and Backend',
+        label: 'Frontend',
         content: [
-            'Electron (v33.0.1): Ensures the app runs seamlessly as a desktop application across platforms.',
-            'Electron Packager: Used for building and packaging the application for deployment on Windows.',
+            'Electron Ensures the app runs seamlessly as a desktop application across platforms.',
         ],
     },
     {
         label: 'AI Integration',
         content: [
-            'OpenAI SDK (v4.68.1): Powers the app’s content generation capabilities, allowing for intelligent and context-aware post creation.',
+            'OpenAI SDK powers the app content generation capabilities, allowing for intelligent and context-aware post creation.',
         ],
     },
 ];
@@ -148,13 +147,12 @@ const problemContent = {
 const platforms = {
     desktop: {
         images: [
-            new URL('../../assets/1.jpg', import.meta.url).href,
-            new URL('../../assets/2.jpg', import.meta.url).href,
-            new URL('../../assets/3.jpg', import.meta.url).href,
+            new URL('../../assets/linkedin-journal/d1.png', import.meta.url).href,
+            new URL('../../assets/linkedin-journal/d1.webp', import.meta.url).href,
+            new URL('../../assets/linkedin-journal/d2.webp', import.meta.url).href,
+            new URL('../../assets/linkedin-journal/d3.webp', import.meta.url).href,
+            new URL('../../assets/linkedin-journal/d4.webp', import.meta.url).href,
         ],
-        downloadHandler: () => {
-            console.log('Downloading Desktop App');
-        },
     }
 };
 

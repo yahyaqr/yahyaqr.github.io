@@ -15,11 +15,19 @@
             <div v-if="currentPlatform">
                 <Carousel v-if="currentPlatform.images && currentPlatform.images.length > 0"
                     :images="currentPlatform.images" />
-                <button v-if="currentPlatform.downloadHandler" @click="currentPlatform.downloadHandler"
-                    class="w-full bg-[#ffdb70] hover:bg-[#ffcb2f] text-[#151515] font-bold py-4 px-4 rounded transition duration-300 flex items-center justify-center gap-2">
-                    <Download class="w-4 h-4 sm:w-5 sm:h-5" />
-                    Download for {{ currentPlatform.label }}
-                </button>
+                <div class="w-full">
+                    <button v-if="currentPlatform.downloadHandler" @click="currentPlatform.downloadHandler"
+                        class="w-full bg-[#ffdb70] hover:bg-[#ffcb2f] text-[#151515] font-bold py-4 px-4 rounded transition duration-300 flex items-center justify-center gap-2">
+                        <Download class="w-4 h-4 sm:w-5 sm:h-5" />
+                        Download for {{ currentPlatform.label }}
+                    </button>
+                    <a v-else href="https://www.linkedin.com/in/yahya-aqrom/" target="_blank"
+                        class="flex justify-center items-center gap-1 border border-[#555] px-6 py-2 rounded font-medium hover:bg-white/5">
+                        <img src="../../assets/linkedin.svg" alt="Skill icon"
+                            class="w-6 h-auto filter invert brightness-0" />
+                        Schedule Demo
+                    </a>
+                </div>
             </div>
         </template>
 
@@ -27,11 +35,19 @@
             <!-- Single Platform Content -->
             <div v-for="([key, platform]) in platformEntries" :key="key">
                 <Carousel v-if="platform.images && platform.images.length > 0" :images="platform.images" />
-                <button v-if="platform.downloadHandler" @click="platform.downloadHandler"
-                    class="w-full bg-[#ffdb70] hover:bg-[#ffcb2f] text-[#151515] font-bold py-4 px-4 rounded transition duration-300 flex items-center justify-center gap-2">
-                    <Download class="w-4 h-4 sm:w-5 sm:h-5" />
-                    Download for {{ platform.label }}
-                </button>
+                <div class="w-full">
+                    <button v-if="platform.downloadHandler" @click="platform.downloadHandler"
+                        class="w-full bg-[#ffdb70] hover:bg-[#ffcb2f] text-[#151515] font-bold py-4 px-4 rounded transition duration-300 flex items-center justify-center gap-2">
+                        <Download class="w-4 h-4 sm:w-5 sm:h-5" />
+                        Download for {{ platform.label }}
+                    </button>
+                    <a v-else href="https://www.linkedin.com/in/yahya-aqrom/" target="_blank"
+                        class="flex justify-center items-center gap-1 border border-[#555] px-6 py-2 rounded font-medium hover:bg-white/5">
+                        <img src="../../assets/linkedin.svg" alt="Skill icon"
+                            class="w-6 h-auto filter invert brightness-0" />
+                        Schedule Demo
+                    </a>
+                </div>
             </div>
         </template>
 
@@ -77,9 +93,9 @@ const platformMeta = ref({
 const platformData = ref({
     desktop: {
         images: [
-            new URL('../../assets/1.jpg', import.meta.url).href,
-            new URL('../../assets/2.jpg', import.meta.url).href,
-            new URL('../../assets/3.jpg', import.meta.url).href,
+            new URL('../../assets/1.webp', import.meta.url).href,
+            new URL('../../assets/2.webp', import.meta.url).href,
+            new URL('../../assets/3.webp', import.meta.url).href,
         ],
         downloadHandler: () => console.log('Downloading Placeholder Desktop App'),
     },

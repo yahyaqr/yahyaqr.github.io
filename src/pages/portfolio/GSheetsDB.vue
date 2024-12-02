@@ -101,51 +101,25 @@ const overviewContent = [
 ];
 
 const keyFeaturesContent = [
-    'Google Sheets as a Database: Turns Google Sheets into a fully functional backend database for dynamic data storage.',
-    'CRUD Dashboard: Automatically generates a CRUD (Create, Read, Update, Delete) interface that updates dynamically with changes to Google Sheets headers.',
-    'Cost-Effective: Eliminates the need for traditional hosting or cloud VPS services, making it ideal for static website deployment.',
+    'Turns Google Sheets into a fully functional backend database for dynamic data storage.',
+    'Automatically generates a CRUD (Create, Read, Update, Delete) dashboard that updates dynamically with changes to Google Sheets headers.',
+    'Eliminates the need for traditional hosting or cloud VPS services, making it ideal for static website deployment.',
 ];
 
 const techStackContent = [
     {
         label: 'Frontend',
         content: [
-            'Templating: EJS (Embedded JavaScript) for rendering dynamic web pages.',
+            'EJS (Embedded JavaScript) for rendering dynamic web pages.',
         ],
     },
     {
         label: 'Backend',
         content: [
-            'Framework: Express.js for handling API requests and routing.',
-            'Google Sheets Integration: googleapis library to connect and interact with Google Sheets.',
-        ],
-    },
-    {
-        label: 'Authentication',
-        content: [
+            'Express.js for handling API requests and routing.',
+            'gGoogleapis library to connect and interact with Google Sheets.',
             'jsonwebtoken for secure user authentication.',
             'bcrypt for password hashing and security.',
-        ],
-    },
-    {
-        label: 'Middleware',
-        content: [
-            'cors to enable cross-origin requests.',
-            'cookie-parser for managing user sessions.',
-        ],
-    },
-    {
-        label: 'Utilities',
-        content: [
-            'File Management: multer for handling file uploads.',
-            'Static File Serving: serve-static for serving assets.',
-            'Environment Management: dotenv to manage environment variables.',
-        ],
-    },
-    {
-        label: 'Development Tools',
-        content: [
-            'Nodemon: For automatically restarting the server during development.',
         ],
     },
 ];
@@ -181,15 +155,10 @@ const problemContent = {
 };
 
 const platforms = {
-    desktop: {
+    web: {
         images: [
-            new URL('../../assets/1.jpg', import.meta.url).href,
-            new URL('../../assets/2.jpg', import.meta.url).href,
-            new URL('../../assets/3.jpg', import.meta.url).href,
+            new URL('../../assets/gsheets-db.webp', import.meta.url).href,
         ],
-        downloadHandler: () => {
-            console.log('Downloading Desktop App');
-        },
     }
 };
 

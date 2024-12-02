@@ -41,9 +41,9 @@ const content = {
 
 // Profile Images
 const profileImages = ref([
-    new URL("../../assets/1.jpg", import.meta.url).href,
-    new URL("../../assets/2.jpg", import.meta.url).href,
-    new URL("../../assets/3.jpg", import.meta.url).href,
+    new URL("../../assets/1.webp", import.meta.url).href,
+    new URL("../../assets/2.webp", import.meta.url).href,
+    new URL("../../assets/3.webp", import.meta.url).href,
 ]);
 
 const profileImageIndex = ref(0);

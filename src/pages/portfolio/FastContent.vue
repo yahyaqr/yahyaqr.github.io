@@ -101,32 +101,27 @@ const overviewContent = [
 ];
 
 const keyFeaturesContent = [
-    'Diverse Content Formats: Create content in formats like Discussions, Interviews, Monologues, and Storytelling instantly.',
-    'AI-Powered Script Creation: Accepts raw text materials and transforms them into complete scripts with ease.',
-    'Voice Cloning: Allows users to integrate their own voice for a personalized and realistic content experience.',
+    'Create audiovisual content in formats like Discussions, Interviews, Monologues, and Storytelling instantly.',
+    'Accepts raw text materials and transforms them into complete scripts with ease.',
+    'Allows users to integrate their own voice for a personalized and realistic content experience.',
 ];
 
 const techStackContent = [
     {
         label: 'Frontend',
         content: [
-            'Built using Vue.js 3.5.12 for a modern and dynamic user interface.',
-            'TailwindCSS 3.4.14 for a responsive and customizable design.',
+            'Built using Vue.js for a modern and dynamic user interface.',
+            'Electron for cross-platform compatibility on Desktop.',
+            'TailwindCSS for a responsive and customizable design.',
         ],
     },
     {
         label: 'Backend',
         content: [
-            'Powered by Vite 5.4.9 for a fast and optimized development environment.',
+            'OpenAI API for JSON data formatting and synthesis.',
+            'Libraries like audio-buffer, audiobuffer-to-wav, and wav-encoder ensure high-quality audio processing for voice cloning and script playback.',
         ],
-    },
-    {
-        label: 'Others',
-        content: [
-            'Audio Processing: Libraries like audio-buffer, audiobuffer-to-wav, and wav-encoder ensure high-quality audio management and processing for voice cloning and script playback.',
-            'Additional Tools: Lucide Vue Next for scalable icons, PostCSS, and Autoprefixer for efficient CSS management and cross-browser compatibility.',
-        ],
-    },
+    }
 ];
 
 const targetUsersContent = [
@@ -157,13 +152,12 @@ const problemContent = {
 const platforms = {
     desktop: {
         images: [
-            new URL('../../assets/1.jpg', import.meta.url).href,
-            new URL('../../assets/2.jpg', import.meta.url).href,
-            new URL('../../assets/3.jpg', import.meta.url).href,
+            new URL('../../assets/fast-content/d1.png', import.meta.url).href,
+            new URL('../../assets/fast-content/d1.webp', import.meta.url).href,
+            new URL('../../assets/fast-content/d2.webp', import.meta.url).href,
+            new URL('../../assets/fast-content/d3.webp', import.meta.url).href,
+            new URL('../../assets/fast-content/d4.webp', import.meta.url).href,
         ],
-        downloadHandler: () => {
-            console.log('Downloading Desktop App');
-        },
     }
 };
 

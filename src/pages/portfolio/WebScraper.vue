@@ -101,10 +101,10 @@ const overviewContent = [
 ];
 
 const keyFeaturesContent = [
-    'Easy-to-Use Interface: A simple, intuitive design tailored for non-technical users.',
-    'Flexible Data Extraction: Supports extracting data from various websites, including tables, lists, and structured content.',
-    'Excel Export: Automatically saves the extracted data into an organized .xlsx file.',
-    'Free and Accessible: No cost to use, making data collection accessible for everyone.',
+    'Provide simple, intuitive design tailored for non-technical users.',
+    'Supports extracting data from various websites, including tables, lists, and structured content.',
+    'Automatically saves the extracted data into an organized .xlsx file.',
+    'No cost to use, making data collection accessible for everyone.',
 ];
 
 const techStackContent = [
@@ -114,25 +114,13 @@ const techStackContent = [
             'Puppeteer: Automates browser interactions and extracts complex web data.',
             'Cheerio: Parses and manipulates HTML for targeted data extraction.',
             'Axios: Handles HTTP requests to fetch web content.',
-        ],
-    },
-    {
-        label: 'Data Processing',
-        content: [
             'XLSX: Converts extracted data into Excel files.',
         ],
     },
     {
-        label: 'Utilities',
+        label: 'Frontend',
         content: [
-            'Multer: Manages file uploads.',
-            'Inquirer: Simplifies user prompts for setting up scraping parameters.',
-        ],
-    },
-    {
-        label: 'Future Frontend',
-        content: [
-            'Electron.js: Planned framework to turn the app into a cross-platform desktop application.',
+            'Electron.js: Framework to turn the app into a cross-platform desktop application.',
         ],
     },
 ];
@@ -171,13 +159,9 @@ const problemContent = {
 const platforms = {
     desktop: {
         images: [
-            new URL('../../assets/1.jpg', import.meta.url).href,
-            new URL('../../assets/2.jpg', import.meta.url).href,
-            new URL('../../assets/3.jpg', import.meta.url).href,
+            new URL('../../assets/web-scraper/d1.png', import.meta.url).href,
+            new URL('../../assets/web-scraper/d1.webp', import.meta.url).href,
         ],
-        downloadHandler: () => {
-            console.log('Downloading Desktop App');
-        },
     }
 };
 

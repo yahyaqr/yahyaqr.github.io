@@ -1,6 +1,6 @@
 <template>
     <article
-        class="bg-[#151515] border border-gray-600 rounded-2xl p-5 mb-5 text-gray-300 transition-colors duration-300 hover:border-[#ffdb70] group"
+        class="bg-[#151515] border border-gray-600 rounded-2xl p-5 text-gray-300 transition-colors duration-300 hover:border-[#ffdb70] group"
         title="Teaching Experience">
         <h2 class="text-xl font-bold mb-4 text-white transition-colors duration-300 group-hover:text-[#ffdb70]">
             Teaching Experience

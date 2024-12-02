@@ -101,34 +101,33 @@ const overviewContent = [
 ];
 
 const keyFeaturesContent = [
-    'Integrated Ecosystem:',
     'LabPVT+ (Desktop App) for researchers to manage studies and analyze data.',
     'PVT+ (Mobile App) for participants to perform tasks conveniently.',
-    'Efficient Data Collection and Analysis: Simplifies the generation of research statistics and visualizations.',
-    'Modern Accessibility: Provides a more accessible alternative to exclusive solutions like NASA-PVT+.',
+    'Simplifies the generation of research statistics and visualizations.',
+    'Provides a more accessible alternative to NASA-PVT+.',
 ];
 
 const techStackContent = [
     {
         label: 'PVT+ (Mobile App)',
         content: [
-            'Framework: Vue.js (v3.3.0) for building the user interface.',
-            'Mobile Development: Capacitor for cross-platform compatibility on Android and iOS.',
-            'Routing: Vue Router (v4.2.0) for navigation.',
-            'Utilities: Ionicons for icons, TypeScript for type safety.',
-            'Testing: Cypress (end-to-end testing) and Vitest (unit testing).',
-            'Build System: Vite for fast development and build processes.',
+            'Vue.js for building the user interface.',
+            'Capacitor for cross-platform compatibility on Android and iOS.',
+            'Vue Router for navigation.',
+            'Ionicons for icons, TypeScript for type safety.',
+            'Vite for fast development and build processes.',
         ],
     },
     {
         label: 'LabPVT+ (Desktop App)',
         content: [
-            'Framework: Vue.js (v3.3.4) for frontend development.',
-            'GraphQL Support: Apollo Client and GraphQL integration for managing research data and statistics.',
-            'Styling: TailwindCSS (including aspect-ratio and typography plugins) and DaisyUI for a clean, responsive design.',
-            'Routing: Vue Router (v4.2.2) for app navigation.',
-            'Build System: Vite for efficient development and builds.',
-            'Testing and Linting: TypeScript and ESLint for maintaining code quality.',
+            'Vue.js for frontend development.',
+            'Electron for cross-platform compatibility on Desktop.',
+            'Apollo Client and GraphQL integration for managing data statistics.',
+            'TailwindCSS and DaisyUI for a clean, responsive design.',
+            'Vue Router for app navigation.',
+            'TypeScript and ESLint for maintaining code quality.',
+            'Vite for efficient development and builds.',
         ],
     },
 ];
@@ -160,13 +159,21 @@ const problemContent = {
 const platforms = {
     desktop: {
         images: [
-            new URL('../../assets/1.jpg', import.meta.url).href,
-            new URL('../../assets/2.jpg', import.meta.url).href,
-            new URL('../../assets/3.jpg', import.meta.url).href,
+            new URL('../../assets/sleep-research/d1.png', import.meta.url).href,
+            new URL('../../assets/sleep-research/d1.gif', import.meta.url).href,
+            new URL('../../assets/sleep-research/d2.gif', import.meta.url).href,
+            new URL('../../assets/sleep-research/d3.gif', import.meta.url).href,
+            new URL('../../assets/sleep-research/d4.gif', import.meta.url).href,
         ],
-        downloadHandler: () => {
-            console.log('Downloading Desktop App');
-        },
+    },
+    mobile: {
+        images: [
+            new URL('../../assets/sleep-research/m1.png', import.meta.url).href,
+            new URL('../../assets/sleep-research/m1.gif', import.meta.url).href,
+            new URL('../../assets/sleep-research/m2.gif', import.meta.url).href,
+            new URL('../../assets/sleep-research/m3.gif', import.meta.url).href,
+            new URL('../../assets/sleep-research/m4.gif', import.meta.url).href,
+        ],
     }
 };
 
