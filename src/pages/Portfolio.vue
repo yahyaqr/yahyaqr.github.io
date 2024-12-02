@@ -62,7 +62,7 @@ const projects = ref([
         image: new URL('../../src/assets/portfolio/sleep-research.webp', import.meta.url).href,
         url: '/portfolio/sleep-research',
         category: 'Mobile',
-        technologies: ['Mobile', 'Mobile', 'AI'],
+        technologies: ['Mobile', 'AI'],
     },
     {
         id: 2,
