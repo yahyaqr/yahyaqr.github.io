@@ -120,7 +120,7 @@ const projects = ref([
     },
 ]);
 
-const categories = ['All', 'Desktop', 'Mobile', 'Web'];
+const categories = ['All', 'Desktop', 'Mobile', 'Web', 'AI'];
 const currentCategory = ref('All');
 const visibleProjects = ref(9);
 
