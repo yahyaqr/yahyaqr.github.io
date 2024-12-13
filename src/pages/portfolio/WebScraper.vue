@@ -163,7 +163,7 @@ const platforms = {
         ],
         downloadHandler: () => {
             const link = document.createElement('a');
-            link.href = 'https://github.com/yahyaqr/releases-web-scraper/releases/download/v1.0.0/WebScraper-win32-x64.zip';
+            link.href = 'https://github.com/yahyaqr/releases-web-scraper/releases';
             link.download = '';
             link.target = '_blank';
             document.body.appendChild(link);
