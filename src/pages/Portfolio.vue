@@ -61,8 +61,8 @@ const projects = ref([
         description: 'A desktop and mobile app that aids researchers in analyzing psychomotor vigilance tasks for sleep-deprived individuals.',
         image: new URL('../../src/assets/portfolio/sleep-research.webp', import.meta.url).href,
         url: '/portfolio/sleep-research',
-        category: 'Mobile',
-        technologies: ['Mobile', 'AI'],
+        category: ['Desktop', 'Mobile', 'AI'],
+        technologies: ['Desktop', 'Mobile', 'AI'],
     },
     {
         id: 2,
@@ -70,7 +70,7 @@ const projects = ref([
         description: 'A web application that automates financial and operational evaluation for startups, leveraging web scraping, pitch deck analysis, and machine learning.',
         image: new URL('../../src/assets/portfolio/startups-diligence.webp', import.meta.url).href,
         url: '/portfolio/startups-diligence',
-        category: 'Web',
+        category: ['Web', 'AI'],
         technologies: ['Web', 'AI'],
     },
     {
@@ -79,7 +79,7 @@ const projects = ref([
         description: 'A desktop application that uses AI to generate scripts and conversation audio in formats such as discussions, interviews, and storytelling, with voice cloning support.',
         image: new URL('../../src/assets/portfolio/fast-content.webp', import.meta.url).href,
         url: '/portfolio/fast-content',
-        category: 'Desktop',
+        category: ['Desktop', 'AI'],
         technologies: ['Desktop', 'AI'],
     },
     {
@@ -88,7 +88,7 @@ const projects = ref([
         description: 'A desktop app that automates LinkedIn content creation with AI-generated posts, customizable tone, and a content management dashboard for scheduling posts.',
         image: new URL('../../src/assets/portfolio/linkedin-journal.webp', import.meta.url).href,
         url: '/portfolio/linkedin-journal',
-        category: 'Desktop',
+        category: ['Desktop', 'AI'],
         technologies: ['Desktop', 'AI'],
     },
     {
@@ -97,7 +97,7 @@ const projects = ref([
         description: 'A SaaS platform that transforms Google Sheets into a dynamic backend database with an automated CRUD dashboard for developers and freelancers.',
         image: new URL('../../src/assets/portfolio/gsheets-db.webp', import.meta.url).href,
         url: '/portfolio/gsheets-db',
-        category: 'Web',
+        category: ['Web', 'Database'],
         technologies: ['Web', 'Database'],
     },
     {
@@ -106,7 +106,7 @@ const projects = ref([
         description: 'A SaaS platform for developers to rapidly create CRUD APIs and dashboards using AI-powered endpoint generation, reducing repetitive tasks.',
         image: new URL('../../src/assets/portfolio/instant-backend.webp', import.meta.url).href,
         url: '/portfolio/instant-backend',
-        category: 'Web',
+        category: ['Web', 'Backend'],
         technologies: ['Web', 'Backend'],
     },
     {
@@ -133,7 +133,9 @@ const filteredProjects = computed(() => {
     let filtered =
         currentCategory.value === 'All'
             ? projects.value
-            : projects.value.filter((project) => project.category === currentCategory.value);
+            : projects.value.filter((project) =>
+                project.category.includes(currentCategory.value)
+            );
     return filtered.slice(0, visibleProjects.value);
 });
 
@@ -142,7 +144,9 @@ const noMoreProjects = computed(() => {
         visibleProjects.value >=
         (currentCategory.value === 'All'
             ? projects.value.length
-            : projects.value.filter((project) => project.category === currentCategory.value).length)
+            : projects.value.filter((project) =>
+                project.category.includes(currentCategory.value)
+            ).length)
     );
 });
 

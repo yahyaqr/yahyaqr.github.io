@@ -155,13 +155,21 @@ const problemContent = {
     ],
 };
 
-
 const platforms = {
     desktop: {
         images: [
             new URL('../../assets/web-scraper/d1.png', import.meta.url).href,
             new URL('../../assets/web-scraper/d1.webp', import.meta.url).href,
         ],
+        downloadHandler: () => {
+            const link = document.createElement('a');
+            link.href = 'https://github.com/yahyaqr/projects-web-scraper/releases/download/v1.0.0/WebScraper-win32-x64.zip';
+            link.download = '';
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        },
     }
 };
 
