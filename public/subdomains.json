@@ -1,5 +1,20 @@
 [
   {
+    "id": "dawm",
+    "subdomain": "dawm",
+    "type": "external",
+    "title": "DAWM",
+    "content": null,
+    "targetUrl": "https://dawm.vercel.app/",
+    "theme": {
+      "background": "#111111",
+      "accent": "#ffdb70"
+    },
+    "status": "active",
+    "createdAt": "2026-04-26T00:00:00.000Z",
+    "updatedAt": "2026-04-26T00:00:00.000Z"
+  },
+  {
     "id": "cv",
     "subdomain": "cv",
     "type": "redirect",

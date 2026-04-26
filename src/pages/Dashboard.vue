@@ -85,6 +85,7 @@
               >
                 <option value="page">Page</option>
                 <option value="redirect">Redirect</option>
+                <option value="external">External project</option>
               </select>
             </label>
 
@@ -118,13 +119,18 @@
             </label>
           </div>
 
-          <label v-if="selectedRecord.type === 'redirect'" class="mt-4 block">
-            <span class="text-sm font-medium text-[#d6d6d6]">Redirect URL</span>
+          <label v-if="selectedRecord.type !== 'page'" class="mt-4 block">
+            <span class="text-sm font-medium text-[#d6d6d6]">
+              {{ selectedRecord.type === 'external' ? 'Reference URL' : 'Redirect URL' }}
+            </span>
             <input
               v-model.trim="selectedRecord.targetUrl"
               class="mt-2 w-full border border-[#555] bg-[#111111] px-3 py-2 outline-none focus:border-[#ffdb70]"
               placeholder="https://example.com"
             />
+            <span v-if="selectedRecord.type === 'external'" class="mt-2 block text-xs leading-5 text-[#d6d6d6]">
+              External records reserve the subdomain here. Add the exact custom domain to the other Vercel project so it handles traffic before the wildcard app.
+            </span>
           </label>
 
           <label v-else class="mt-4 block">
@@ -240,7 +246,7 @@ function prepareRecordForType() {
     return;
   }
 
-  if (selectedRecord.value.type === 'redirect') {
+  if (selectedRecord.value.type !== 'page') {
     selectedRecord.value.content = null;
   } else if (!selectedRecord.value.content) {
     selectedRecord.value.content = {

@@ -20,6 +20,24 @@
       </a>
     </section>
 
+    <section v-else-if="externalTenant" class="w-full max-w-xl text-center">
+      <p class="text-sm uppercase tracking-[0.25em]" :style="{ color: pageTheme.accent }">External</p>
+      <h1 class="mt-4 text-4xl font-bold">{{ externalTenant.title }}</h1>
+      <p class="mt-4 text-white/70">
+        This subdomain is reserved for another Vercel project. Add this exact domain to that project so it handles traffic before the wildcard app.
+      </p>
+      <a
+        v-if="externalTenant.targetUrl"
+        :href="externalTenant.targetUrl"
+        target="_blank"
+        rel="noreferrer"
+        class="mt-8 inline-flex items-center justify-center border px-5 py-3 text-sm font-medium hover:bg-white/10"
+        :style="{ borderColor: pageTheme.accent, color: pageTheme.accent }"
+      >
+        Open reference project
+      </a>
+    </section>
+
     <section v-else class="w-full max-w-2xl">
       <p class="text-sm uppercase tracking-[0.25em]" :style="{ color: pageTheme.accent }">
         {{ tenant.subdomain }}.{{ rootDomain }}
@@ -56,6 +74,7 @@ import { isValidHttpUrl } from '../../lib/subdomainValidation';
 const loading = ref(true);
 const error = ref('');
 const tenant = ref(null);
+const externalTenant = ref(null);
 const rootDomain = ROOT_DOMAIN;
 const rootUrl = `https://${ROOT_DOMAIN}`;
 const fallbackTheme = {
@@ -92,6 +111,12 @@ onMounted(async () => {
 
     if (record.type === 'redirect') {
       window.location.replace(record.targetUrl);
+      return;
+    }
+
+    if (record.type === 'external') {
+      externalTenant.value = record;
+      document.title = record.title;
       return;
     }
 
