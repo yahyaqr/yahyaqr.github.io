@@ -10,6 +10,9 @@ const InstantBackend = () => import('../pages/portfolio/InstantBackend.vue');
 const LinkedinJournal = () => import('../pages/portfolio/LinkedinJournal.vue');
 const StartupsDue = () => import('../pages/portfolio/StartupsDue.vue');
 const WebScraper = () => import('../pages/portfolio/WebScraper.vue');
+const Dashboard = () => import('../pages/Dashboard.vue');
+const DashboardLogin = () => import('../pages/DashboardLogin.vue');
+const NotFound = () => import('../pages/NotFound.vue');
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -22,7 +25,9 @@ const routes = [
   { path: '/portfolio/linkedin-journal', name: 'LinkedinJournal', component: LinkedinJournal },
   { path: '/portfolio/startups-diligence', name: 'StartupsDue', component: StartupsDue },
   { path: '/portfolio/web-scraper', name: 'WebScraper', component: WebScraper },
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: Home },
+  { path: '/dashboard/login', name: 'DashboardLogin', component: DashboardLogin, meta: { hideShell: true } },
+  { path: '/dashboard', name: 'Dashboard', component: Dashboard, meta: { hideShell: true } },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ];
 
 const router = createRouter({

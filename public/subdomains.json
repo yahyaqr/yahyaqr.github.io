@@ -1,0 +1,45 @@
+[
+  {
+    "id": "cv",
+    "subdomain": "cv",
+    "type": "redirect",
+    "title": "CV",
+    "content": null,
+    "targetUrl": "https://www.linkedin.com/in/yahya-aqrom/",
+    "theme": {
+      "background": "#111111",
+      "accent": "#ffdb70"
+    },
+    "status": "active",
+    "createdAt": "2026-04-26T00:00:00.000Z",
+    "updatedAt": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "bio",
+    "subdomain": "bio",
+    "type": "page",
+    "title": "Yahya Aqrom",
+    "content": {
+      "headline": "Yahya Aqrom",
+      "description": "Builder, researcher, and full-stack engineer focused on fast, useful products.",
+      "links": [
+        {
+          "label": "Portfolio",
+          "url": "https://yahyaqr.xyz/portfolio"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/in/yahya-aqrom/"
+        }
+      ]
+    },
+    "targetUrl": "",
+    "theme": {
+      "background": "#111111",
+      "accent": "#ffdb70"
+    },
+    "status": "active",
+    "createdAt": "2026-04-26T00:00:00.000Z",
+    "updatedAt": "2026-04-26T00:00:00.000Z"
+  }
+]
