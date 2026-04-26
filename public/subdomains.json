@@ -1,5 +1,20 @@
 [
   {
+    "id": "postly",
+    "subdomain": "postly",
+    "type": "external",
+    "title": "POSTLY",
+    "content": null,
+    "targetUrl": "https://post-dir.vercel.app/",
+    "theme": {
+      "background": "#111111",
+      "accent": "#ffdb70"
+    },
+    "status": "active",
+    "createdAt": "2026-04-26T10:47:46.864Z",
+    "updatedAt": "2026-04-26T10:48:24.790Z"
+  },
+  {
     "id": "dawm",
     "subdomain": "dawm",
     "type": "external",
@@ -12,7 +27,7 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-04-26T00:00:00.000Z"
+    "updatedAt": "2026-04-26T10:48:24.790Z"
   },
   {
     "id": "cv",
@@ -27,7 +42,7 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-04-26T00:00:00.000Z"
+    "updatedAt": "2026-04-26T10:48:24.790Z"
   },
   {
     "id": "bio",
@@ -55,6 +70,6 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-04-26T00:00:00.000Z"
+    "updatedAt": "2026-04-26T10:48:24.790Z"
   }
 ]
