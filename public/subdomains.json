@@ -1,5 +1,95 @@
 [
   {
+    "id": "berkaslegal",
+    "subdomain": "berkaslegal",
+    "type": "external",
+    "title": "Berkaslegal",
+    "content": null,
+    "targetUrl": "https://berkaslegal.yahyaqr.xyz/",
+    "theme": {
+      "background": "#111111",
+      "accent": "#ffdb70"
+    },
+    "status": "active",
+    "createdAt": "2026-05-01T08:58:31.079Z",
+    "updatedAt": "2026-05-01T08:58:57.574Z"
+  },
+  {
+    "id": "rasaventure",
+    "subdomain": "rasaventure",
+    "type": "external",
+    "title": "Rasaventure",
+    "content": null,
+    "targetUrl": "https://rasaventure.yahyaqr.xyz/",
+    "theme": {
+      "background": "#111111",
+      "accent": "#ffdb70"
+    },
+    "status": "active",
+    "createdAt": "2026-05-01T08:58:18.899Z",
+    "updatedAt": "2026-05-01T08:58:57.574Z"
+  },
+  {
+    "id": "stages",
+    "subdomain": "stages",
+    "type": "external",
+    "title": "Stages",
+    "content": null,
+    "targetUrl": "https://stages.yahyaqr.xyz/",
+    "theme": {
+      "background": "#111111",
+      "accent": "#ffdb70"
+    },
+    "status": "active",
+    "createdAt": "2026-05-01T08:57:58.461Z",
+    "updatedAt": "2026-05-01T08:58:57.574Z"
+  },
+  {
+    "id": "dashboard-pex",
+    "subdomain": "dashboard-pex",
+    "type": "external",
+    "title": "Dashboard PEX",
+    "content": null,
+    "targetUrl": "https://dashboard-pex.yahyaqr.xyz/",
+    "theme": {
+      "background": "#111111",
+      "accent": "#ffdb70"
+    },
+    "status": "active",
+    "createdAt": "2026-05-01T08:56:36.908Z",
+    "updatedAt": "2026-05-01T08:58:57.574Z"
+  },
+  {
+    "id": "mobile-pex",
+    "subdomain": "mobile-pex",
+    "type": "external",
+    "title": "Mobile Pex",
+    "content": null,
+    "targetUrl": "https://mobile-pex.yahyaqr.xyz/",
+    "theme": {
+      "background": "#111111",
+      "accent": "#ffdb70"
+    },
+    "status": "active",
+    "createdAt": "2026-05-01T08:56:11.984Z",
+    "updatedAt": "2026-05-01T08:58:57.574Z"
+  },
+  {
+    "id": "chc-calculator",
+    "subdomain": "chc-calculator",
+    "type": "external",
+    "title": "CHC Steel Calculator",
+    "content": null,
+    "targetUrl": "https://chc-calculator.yahyaqr.xyz/",
+    "theme": {
+      "background": "#111111",
+      "accent": "#ffdb70"
+    },
+    "status": "active",
+    "createdAt": "2026-05-01T08:55:29.354Z",
+    "updatedAt": "2026-05-01T08:58:57.574Z"
+  },
+  {
     "id": "postly",
     "subdomain": "postly",
     "type": "external",
@@ -12,7 +102,7 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T10:47:46.864Z",
-    "updatedAt": "2026-04-26T10:48:24.790Z"
+    "updatedAt": "2026-05-01T08:58:57.574Z"
   },
   {
     "id": "dawm",
@@ -27,7 +117,7 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-04-26T10:48:24.790Z"
+    "updatedAt": "2026-05-01T08:58:57.574Z"
   },
   {
     "id": "cv",
@@ -42,7 +132,7 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-04-26T10:48:24.790Z"
+    "updatedAt": "2026-05-01T08:58:57.574Z"
   },
   {
     "id": "bio",
@@ -70,6 +160,6 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-04-26T10:48:24.790Z"
+    "updatedAt": "2026-05-01T08:58:57.574Z"
   }
 ]
