@@ -12,7 +12,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:58:31.079Z",
-    "updatedAt": "2026-05-01T08:58:57.574Z"
+    "updatedAt": "2026-08-09T02:59:54.022Z"
   },
   {
     "id": "rasaventure",
@@ -27,7 +27,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:58:18.899Z",
-    "updatedAt": "2026-05-01T08:58:57.574Z"
+    "updatedAt": "2026-08-09T02:59:54.022Z"
   },
   {
     "id": "stages",
@@ -42,7 +42,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:57:58.461Z",
-    "updatedAt": "2026-05-01T08:58:57.574Z"
+    "updatedAt": "2026-08-09T02:59:54.022Z"
   },
   {
     "id": "dashboard-pex",
@@ -57,7 +57,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:56:36.908Z",
-    "updatedAt": "2026-05-01T08:58:57.574Z"
+    "updatedAt": "2026-08-09T02:59:54.022Z"
   },
   {
     "id": "mobile-pex",
@@ -72,7 +72,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:56:11.984Z",
-    "updatedAt": "2026-05-01T08:58:57.574Z"
+    "updatedAt": "2026-08-09T02:59:54.022Z"
   },
   {
     "id": "chc-calculator",
@@ -87,7 +87,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:55:29.354Z",
-    "updatedAt": "2026-05-01T08:58:57.574Z"
+    "updatedAt": "2026-08-09T02:59:54.022Z"
   },
   {
     "id": "postly",
@@ -95,14 +95,14 @@
     "type": "external",
     "title": "POSTLY",
     "content": null,
-    "targetUrl": "https://post-dir.vercel.app/",
+    "targetUrl": "https://postly.aqrom-yahya75.workers.dev/",
     "theme": {
       "background": "#111111",
       "accent": "#ffdb70"
     },
     "status": "active",
     "createdAt": "2026-04-26T10:47:46.864Z",
-    "updatedAt": "2026-05-01T08:58:57.574Z"
+    "updatedAt": "2026-08-09T02:59:54.022Z"
   },
   {
     "id": "dawm",
@@ -117,7 +117,7 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-05-01T08:58:57.574Z"
+    "updatedAt": "2026-08-09T02:59:54.022Z"
   },
   {
     "id": "cv",
@@ -132,7 +132,7 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-05-01T08:58:57.574Z"
+    "updatedAt": "2026-08-09T02:59:54.022Z"
   },
   {
     "id": "bio",
@@ -160,6 +160,6 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-05-01T08:58:57.574Z"
+    "updatedAt": "2026-08-09T02:59:54.022Z"
   }
 ]
