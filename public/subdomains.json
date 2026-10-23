@@ -5,14 +5,14 @@
     "type": "external",
     "title": "Remotion",
     "content": null,
-    "targetUrl": "http://194.233.76.36:3470",
+    "targetUrl": "http://194.233.76.36:3471",
     "theme": {
       "background": "#111111",
       "accent": "#ffdb70"
     },
     "status": "active",
     "createdAt": "2026-10-23T18:40:30.342Z",
-    "updatedAt": "2026-10-23T18:41:02.809Z"
+    "updatedAt": "2026-10-23T18:47:47.005Z"
   },
   {
     "id": "berkaslegal",
@@ -27,7 +27,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:58:31.079Z",
-    "updatedAt": "2026-10-23T18:41:02.809Z"
+    "updatedAt": "2026-10-23T18:47:47.005Z"
   },
   {
     "id": "rasaventure",
@@ -42,7 +42,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:58:18.899Z",
-    "updatedAt": "2026-10-23T18:41:02.809Z"
+    "updatedAt": "2026-10-23T18:47:47.005Z"
   },
   {
     "id": "stages",
@@ -57,7 +57,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:57:58.461Z",
-    "updatedAt": "2026-10-23T18:41:02.809Z"
+    "updatedAt": "2026-10-23T18:47:47.005Z"
   },
   {
     "id": "dashboard-pex",
@@ -72,7 +72,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:56:36.908Z",
-    "updatedAt": "2026-10-23T18:41:02.809Z"
+    "updatedAt": "2026-10-23T18:47:47.005Z"
   },
   {
     "id": "mobile-pex",
@@ -87,7 +87,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:56:11.984Z",
-    "updatedAt": "2026-10-23T18:41:02.809Z"
+    "updatedAt": "2026-10-23T18:47:47.005Z"
   },
   {
     "id": "chc-calculator",
@@ -102,7 +102,7 @@
     },
     "status": "active",
     "createdAt": "2026-05-01T08:55:29.354Z",
-    "updatedAt": "2026-10-23T18:41:02.809Z"
+    "updatedAt": "2026-10-23T18:47:47.005Z"
   },
   {
     "id": "postly",
@@ -117,7 +117,7 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T10:47:46.864Z",
-    "updatedAt": "2026-10-23T18:41:02.809Z"
+    "updatedAt": "2026-10-23T18:47:47.005Z"
   },
   {
     "id": "dawm",
@@ -132,7 +132,7 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-10-23T18:41:02.809Z"
+    "updatedAt": "2026-10-23T18:47:47.005Z"
   },
   {
     "id": "cv",
@@ -147,7 +147,7 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-10-23T18:41:02.809Z"
+    "updatedAt": "2026-10-23T18:47:47.005Z"
   },
   {
     "id": "bio",
@@ -175,6 +175,6 @@
     },
     "status": "active",
     "createdAt": "2026-04-26T00:00:00.000Z",
-    "updatedAt": "2026-10-23T18:41:02.809Z"
+    "updatedAt": "2026-10-23T18:47:47.005Z"
   }
 ]
